@@ -3,7 +3,8 @@ from openai import OpenAI
 import base64
 
 app = FastAPI()
-client = OpenAI(api_key="YOUR_API_KEY")
+client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
+
 
 @app.post("/analyze")
 async def analyze(file: UploadFile = File(...)):
