@@ -1,6 +1,7 @@
 from fastapi import FastAPI, UploadFile, File
 from openai import OpenAI
 import base64
+import os
 
 app = FastAPI()
 client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
