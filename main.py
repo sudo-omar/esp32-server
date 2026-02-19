@@ -18,7 +18,7 @@ async def analyze(file: UploadFile = File(...)):
     base64_image = base64.b64encode(image_bytes).decode("utf-8")
 
     response = client.responses.create(
-        model="gpt-4.1-mini",
+        model="gpt-5.2",
         input=[
             {
                 "role": "user",
