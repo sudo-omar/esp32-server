@@ -23,7 +23,7 @@ async def analyze(file: UploadFile = File(...)):
             {
                 "role": "user",
                 "content": [
-                    {"type": "input_text", "text": "Describe this image in one short sentence."},
+                    {"type": "input_text", "text": "Extract the text from the provided image, assuming it contains a question or problem statement. Then, provide a clear, concise answer to that question or problem. If the text is unclear or incomplete, note any assumptions you make. Keep your response factual and step-by-step if it involves reasoning or calculations."},
                     {"type": "input_image", "image_url": f"data:image/jpeg;base64,{base64_image}"}
                 ]
             }
