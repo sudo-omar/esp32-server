@@ -23,7 +23,7 @@ async def analyze(file: UploadFile = File(...)):
             {
                 "role": "user",
                 "content": [
-                    {"type": "input_text", "text": "Extract the main question or problem statement from the provided image. Then provide a clear, concise answer. Respond in the following format: question: (the extracted question with assumptions you made), answer: (your answer). Output only plain text, no special characters allowed whatsoever near quotation marks whatsoever."},
+                    {"type": "input_text", "text": "Extract the main question or problem statement from the provided image. Output only plain text, no special characters allowed whatsoever near quotation marks whatsoever. Then provide a clear, concise answer."},
                     {"type": "input_image", "image_url": f"data:image/jpeg;base64,{base64_image}"}
                 ]
             }
